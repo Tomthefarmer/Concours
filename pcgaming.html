@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Autre Concours</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #181c20; color: #fff; }
+
+        .navbar { background: #222831; padding: 1em; display: flex; justify-content: flex-start; align-items: center; }
+        .navbar a { color: #fff; text-decoration: none; margin-right: 1em; font-weight: bold; }
+
+        .container { max-width: 600px; margin: 2em auto; padding: 2em; background: #23272f; border-radius: 8px; }
+
+        h1 { text-align: center; }
+
+        .btn { display: block; width: 100%; margin: 1em 0; padding: 1em; background: #00adb5; color: #fff; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background 0.2s; }
+        .btn:hover { background: #007b80; }
+        .btn.rouge { background: #e53935; }
+        .btn.rouge:hover { background: #b71c1c; }
+        .btn.vert { background: #43a047; }
+        .btn.vert:hover { background: #2e7d32; }
+        .buttons-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1em; }
+        .buttons-row .btn { width: auto; display: inline-block; }
+
+        .hidden { display: none !important; }
+
+        .concours-info { background: #393e46; padding: 1em; border-radius: 5px; margin-top: 1em; display: none; }
+
+        .socials a { color: #00adb5; margin-right: 1em; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3em; font-size: 1.1em; }
+        .socials svg { width: 1.2em; height: 1.2em; vertical-align: middle; fill: #00adb5; }
+
+        .gleam-iframe { width: 100%; min-height: 500px; border: none; border-radius: 8px; background: #fff; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div><a href="starcitizen.html">Star Citizen</a></div>
+        <div><a>PC Gaming</a></div>
+        <div><a href="autre.html">Autre</a></div>
+    </nav>
+
+    <div class="container">
+        <h1>Concours PC Gaming</h1>
+        <div class="buttons-row" role="tablist" aria-label="Sélectionner un Concours">
+            <button class="btn" onclick="showConcours('EXEMPLE')">EXEMPLE</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div id="EXEMPLE" class="concours-info" role="region" aria-label="EXEMPLE">
+            <h2>EXEMPLE</h2>
+            <div class="socials">
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/website.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/x.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/twitch.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/youtube.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/tiktok.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/discord.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/instagram.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/facebook.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/bluesky.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/linktree.png"></a>
+                <a href="EXEMPLE" target="_blank" rel="noopener noreferrer"><img src="img/streamelements.png"></a>
+            </div>
+            <br>
+            <div class="gleam-embed"><a class="e-widget no-button" href="EXEMPLE" rel="nofollow"></a></div>
+        </div>
+
+    </div>
+
+    <script>
+        function showConcours(id) {
+            document.querySelectorAll('.concours-info').forEach(div => div.style.display = 'none');
+            const el = document.getElementById(id);
+            if (el) el.style.display = 'block';
+        }
+    </script>
+    <script src="https://widget.gleamjs.io/e.js" async></script>
+</body>
+</html>

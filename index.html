@@ -67,29 +67,14 @@
     <button onclick="loadGleam('https://gleam.io/xCyfJ/embed?l=https%3A%2F%2Fsubliminal.gg%2Fgiveaway%2F&r=', 'https://www.youtube.com/channel/UCvGQaAbyXpV2FVDImaIj7WQ', 'https://www.twitch.tv/subliminalstv', '#')">SubliminalsTV</button>
   </div>
 
-  <!-- <button onclick="loadGleam('#', '#', '#', '#')">test</button> -->
+  <!-- <button onclick="loadGleam('GleamConcours', 'Youtube', 'Twitch', 'Discord')">Streamer</button> -->
 
   <div id="gleam-container"></div>
 
   <script>
-    function loadGleam(url, youtubeLink, twitchLink, discordLink) {
+    function loadGleam(url) {
       const container = document.getElementById("gleam-container");
       container.innerHTML = '';
-
-      const socialDiv = document.createElement("div");
-      socialDiv.className = "social-icons";
-      socialDiv.innerHTML = `
-        <a href="${youtubeLink}" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-        </a>
-        <a href="${twitchLink}" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/15713/15713413.png" alt="Twitch">
-        </a>
-        <a href="${discordLink}" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
-        </a>   
-      `;
-      container.appendChild(socialDiv);
 
       const iframe = document.createElement("iframe");
       iframe.src = url;
