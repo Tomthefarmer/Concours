@@ -2,71 +2,35 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Autre Concours</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #181c20; color: #fff; }
-
-        .navbar { background: #222831; padding: 1em; display: flex; justify-content: flex-start; align-items: center; }
-        .navbar a { color: #fff; text-decoration: none; margin-right: 1em; font-weight: bold; }
-
-        .container { max-width: 600px; margin: 2em auto; padding: 2em; background: #23272f; border-radius: 8px; }
-
-        h1 { text-align: center; }
-
-        .btn { display: block; width: 100%; margin: 1em 0; padding: 1em; background: #00adb5; color: #fff; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background 0.2s; }
-        .btn:hover { background: #007b80; }
-        .btn.rouge { background: #e53935; }
-        .btn.rouge:hover { background: #b71c1c; }
-        .btn.vert { background: #43a047; }
-        .btn.vert:hover { background: #2e7d32; }
-        .buttons-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1em; }
-        .buttons-row .btn { width: auto; display: inline-block; }
-
-        .hidden { display: none !important; }
-
-        .concours-info { background: #393e46; padding: 1em; border-radius: 5px; margin-top: 1em; display: none; }
-
-        .socials a { color: #00adb5; margin-right: 1em; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3em; font-size: 1.1em; }
-        .socials img { width: 1.2em; height: 1.2em; vertical-align: middle; fill: #00adb5; }
-
-        .gleam-iframe { width: 100%; min-height: 500px; border: none; border-radius: 8px; background: #fff; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des concours</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23070c14'/%3E%3Cstop offset='100%25' stop-color='%2317243a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='url(%23g)'/%3E%3Cpath d='M14 46 L32 14 L50 46' stroke='%2366c7ff' stroke-width='4' fill='none'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%23ff9b52'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <nav class="navbar">
-        <div><a href="starcitizen.html">Star Citizen</a></div>
-        <div><a href="pcgaming.html">PC Gaming</a></div>
-        <div><a>Autre</a></div>
-    </nav>
-
-    <div class="container">
-        <h1>Autre Concours</h1>
-        <div class="buttons-row" role="tablist" aria-label="Sélectionner un Concours">
-            <button class="btn vert" onclick="showConcours('Gleam_io')">Gleam.io</button>
+    <header class="header">
+        <div class="header-content">
+            <h1>Liste des concours</h1>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
-
-        <div id="Gleam_io" class="concours-info" role="region" aria-label="Gleam.io">
-            <h2>Gleam.io</h2>
-            <div class="socials">
-
+    <main class="container">
+        <section class="concours-section">
+            <div id="concours-container" class="concours-grid">
+                <!-- Les cartes de concours seront générées ici par JavaScript -->
             </div>
-            <br>
-            <div class="gleam-embed"><a class="e-widget no-button" href="https://gleam.io/IpgWv/switch-2-mario-kart-world-giveaway" rel="nofollow"></a></div>
-        </div>
+        </section>
+    </main>
 
-    </div>
+    <footer class="footer">
+        <p>&copy; 2026 Tomthefarmer. Tous droits réservés.</p>
+    </footer>
 
-    <script>
-        function showConcours(id) {
-            document.querySelectorAll('.concours-info').forEach(div => div.style.display = 'none');
-            const el = document.getElementById(id);
-            if (el) el.style.display = 'block';
-        }
-    </script>
-    <script src="https://widget.gleamjs.io/e.js" async></script>
+    <script src="script.js"></script>
 </body>
 </html>
